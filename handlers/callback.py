@@ -27,12 +27,12 @@ async def menu_callback(call: CallbackQuery):
 @router.callback_query(F.data == "do")
 async def until_dates(call: CallbackQuery):
     now = datetime.now()
-    now += timedelta(hours=6)
+    now += timedelta(hours=5)
 
-    new_year = datetime(2024, 1, 1)
-    winter = datetime(2023, 12, 1)
-    spring = datetime(2024, 3, 1)
-    summer = datetime(2024, 6, 1)
+    new_year = datetime(2025, 1, 1)
+    winter = datetime(2024, 12, 1)
+    spring = datetime(2025, 3, 1)
+    summer = datetime(2025, 6, 1)
 
     await call.message.edit_text(
         text=f"❄️До зимы {(winter-now).days} дней(день)\n"
